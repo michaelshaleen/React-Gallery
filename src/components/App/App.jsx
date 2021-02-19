@@ -4,7 +4,7 @@ import axios from 'axios';
 import {useState, useEffect} from 'react';
 
 
-const fetchGallery = ()
+// const fetchGallery = ();
 
 
 
@@ -30,7 +30,11 @@ function App() {
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
         <p>Gallery goes here</p>
+        <span>
         <img src="images/goat_small.jpg"/>
+        <img src="images/reef_fish.jpg"/>
+        <img src="images/bear.jpeg"/>
+        </span>
       </div>
     );
 }
