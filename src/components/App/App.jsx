@@ -3,11 +3,14 @@ import './App.css';
 import axios from 'axios';
 import {useState, useEffect} from 'react';
 import FetchGallery from '../GalleryList/GalleryList';
+import GalleryItem from '../GalleryItem/GalleryItem';
 // import galleryItems from '../modules/gallery.data.js';
 
 
 function App() {
   const [galleryList, setGalleryList] = useState([]);
+  const [galleryItem, setGalleryItem] = useState('');
+
   const galleryItems = [
     { id: 1, 
       title: 'Mountain Goat',
@@ -56,6 +59,7 @@ const grabGallery = () =>
         <p>Gallery goes here</p>
         <p>
         <FetchGallery galleryList={galleryList} />
+        <GalleryItem />
         </p>
         <img src="images/goat_small.jpg"/>
         <img src="images/reef_fish.jpg"/>

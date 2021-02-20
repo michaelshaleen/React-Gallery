@@ -1,10 +1,13 @@
 import App from '../App/App';
+import GalleryItem from '../GalleryItem/GalleryItem';
+
 
 
 function FetchGallery({galleryList}){
 
   return(
     <>
+    <GalleryItem />
   <table>
   <tr>
     <th>Firstname</th>

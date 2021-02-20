@@ -1,5 +1,9 @@
-function GalleryItem({galleryList[]}) {
+function GalleryItem({galleryItem}) {
 
   return
   
 }
+
+
+
+export default GalleryItem;
