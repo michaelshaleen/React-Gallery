@@ -1,11 +1,11 @@
 import App from '../App/App';
 import GalleryItem from '../GalleryItem/GalleryItem';
 
+
 function GalleryList({galleryList}){
  // console.log({galleryList})
   return(
   <>
-        <span>return</span>
       <div>
       {galleryList.map((item) => {
         return(
