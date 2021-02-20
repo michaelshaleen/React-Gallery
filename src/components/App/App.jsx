@@ -9,13 +9,11 @@ import GalleryList from '../GalleryList/GalleryList';
 function App() {
   const [galleryList, setGalleryList] = useState([]);
 
-
   useEffect(() => {
     fetchGuests(); //fun that axios get is within
   }, []);
 
 function fetchGuests() {
-  
   axios({
     method: 'GET',
     url: '/gallery'
@@ -32,10 +30,6 @@ function fetchGuests() {
 }
   //issues getting galleryList
   // into the return
-
-  
-
-
 
     return (
       <div className="App">

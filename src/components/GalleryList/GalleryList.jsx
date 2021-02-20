@@ -4,23 +4,22 @@ import GalleryItem from '../GalleryItem/GalleryItem';
 
 
 function GalleryList({galleryList}){
-  //console.log(galleryList, "gallery list")
+ // console.log({galleryList})
   return(
   <>
+        <span>return</span>
       <div>
       {galleryList.map((item) => {
         return(
           <GalleryItem
             key={item.id}
             galleryItem={item}
-
+            //galleryItem = {galleryItem}
           />
         );
       })}
     </div>
-
 </>
-
 )
   };
 
