@@ -3,15 +3,19 @@ import './App.css';
 import axios from 'axios';
 import {useState, useEffect} from 'react';
 import GalleryList from '../GalleryList/GalleryList';
-import GalleryItem from '../GalleryItem/GalleryItem';
 // import galleryItems from '../modules/gallery.data.js';
 
 
 function App() {
   const [galleryList, setGalleryList] = useState([]);
-  const [galleryItem, setGalleryItem] = useState('');
 
 
+  useEffect(() => {
+    fetchGuests(); //fun that axios get is within
+  }, []);
+
+function fetchGuests() {
+  
   axios({
     method: 'GET',
     url: '/gallery'
@@ -20,13 +24,17 @@ function App() {
     //console.log(response.data, "res data")
     setGalleryList(response.data);
     //setGalleryItem(response.pathFor);
-  //console.log(galleryList, "gall list");
+    //console.log(galleryList, "gall list");
   })
   .catch(err => {
     console.log("err", err)
   })
+}
   //issues getting galleryList
   // into the return
+
+  
+
 
 
     return (

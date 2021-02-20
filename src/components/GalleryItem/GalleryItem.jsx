@@ -1,14 +1,21 @@
 function GalleryItem({galleryItem}) {
+  console.log(galleryItem, "item")
 
   return(
     <>
-    <p>{galleryItem} item</p>
-   </>
+    <p>this</p>
+    <div>{galleryItem.item}</div>
 
+
+
+</>
   )
-  
-}
-//why is galleryItem undefined 
+
+
+
+};
+//html up all pieces of the object of each index
+
 
 
 export default GalleryItem;
