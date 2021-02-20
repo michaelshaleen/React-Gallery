@@ -62,7 +62,7 @@ To practice passing values through `props` in React, you will build the gallery 
  and pass it the individual gallery item via `props`. [x]
 
 
-    - Update the `GalleryList` to use this component to display an image.
+    - Update the `GalleryList` to use this component to display an image.[x]
 
 
 

@@ -2,9 +2,7 @@ function GalleryItem({galleryItem}) {
 
   return(
     <>
-    <p>GalleryItem</p>
-   <p> {galleryItem}</p>
-
+    <p>{galleryItem} item</p>
    </>
 
   )

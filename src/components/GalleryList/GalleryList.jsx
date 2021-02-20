@@ -5,11 +5,12 @@ import GalleryItem from '../GalleryItem/GalleryItem';
 
 function GalleryList({galleryList}){
   
-  
-  return(<>
+  return(
+  <>
+        <span>return</span>
       <div>
       {galleryList.map((item) => {
-        return (
+        return(
           <GalleryItem
             key={item.id}
             galleryItem={item}
@@ -17,14 +18,11 @@ function GalleryList({galleryList}){
         );
       })}
     </div>
-  <span>galleryList, should .map and list </span>
 
 </>
 
 )
-  }
-  
-
+  };
 
   export default GalleryList;
 
