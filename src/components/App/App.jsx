@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import axios from 'axios';
 import {useState, useEffect} from 'react';
-import FetchGallery from '../GalleryList/GalleryList';
+import GalleryList from '../GalleryList/GalleryList';
 import GalleryItem from '../GalleryItem/GalleryItem';
 // import galleryItems from '../modules/gallery.data.js';
 
@@ -11,44 +11,22 @@ function App() {
   const [galleryList, setGalleryList] = useState([]);
   const [galleryItem, setGalleryItem] = useState('');
 
-  const galleryItems = [
-    { id: 1, 
-      title: 'Mountain Goat',
-      pathFor:<img src="images/goat_small.jpg"/>, 
-      description: 'Photo of a goat taken at Glacier National Park.', likes: 0
-     },
 
-      { id: 2,
-       title: 'Reef Fish',
-       pathFor: 'images/reef_fish.jpg',
-       description:'Underwater photo of Parrotfish', likes: 0
-      },
-      
-      { id:3,
-      title:'Lone Bear',
-      pathFor: 'images/bear.jpeg',
-      description: 'Artwork of a Bear', likes:0
-      }
-];
-const grabGallery = () =>
-{  axios({
+  axios({
     method: 'GET',
     url: '/gallery'
   })
   .then(response => {
     //console.log(response.data, "res data")
     setGalleryList(response.data);
-    //console.log(galleryList, "gall list");
+    setGalleryItem(response.pathFor);
+  //console.log(galleryList, "gall list");
   })
   .catch(err => {
     console.log("err", err)
   })
-};
-
-
-
-
-
+  //issues getting galleryList
+  // into the return
 
 
     return (
@@ -56,18 +34,20 @@ const grabGallery = () =>
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
+        <div>{galleryList.title} galleryList.title</div>
         <p>Gallery goes here</p>
+
+        <form>
         <p>
-        <FetchGallery galleryList={galleryList} />
-        <GalleryItem />
+        <GalleryList galleryList={galleryList} />
         </p>
         <img src="images/goat_small.jpg"/>
-        <img src="images/reef_fish.jpg"/>
-        <img src="images/bear.jpeg"/>
+        </form>
 
-        
       </div>
     );
 }
+
+{/* <GalleryItem /> */}
 
 export default App;

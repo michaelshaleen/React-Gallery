@@ -3,38 +3,25 @@ import GalleryItem from '../GalleryItem/GalleryItem';
 
 
 
-function FetchGallery({galleryList}){
-
-  return(
-    <>
-    <GalleryItem />
-  <table>
-  <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Age</th>
-  </tr>
-  <tr>
-    <td>{galleryList.title}</td>
-    <td>Smith</td>
-    <td>50</td>
-  </tr>
-  <tr>
-    <td>Eve</td>
-    <td>Jackson</td>
-    <td>{galleryList.title}</td>
-  </tr>
-</table>
-
+function GalleryList({galleryList}){
+  
+  
+  return(<>
+  <span>galleryList, should .map and list </span>
 <p>
-{galleryList.map(picture => 
-  (<li key={picture.id}>{picture.title} {picture.pathFor}</li>))}
+
+{galleryList.map(galleryItem => 
+  (<li key={galleryItem.id}>{galleryItem.id} {galleryItem.title},{galleryItem.pathFor} </li>))}
+  < GalleryItem />
 </p>
 </>
-    )
+
+)
   }
 
-  export default FetchGallery;
+
+
+  export default GalleryList;
 
 
 

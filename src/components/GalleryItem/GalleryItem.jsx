@@ -1,9 +1,16 @@
 function GalleryItem({galleryItem}) {
 
-  return
+  return(
+    <>
+    <p>GalleryItem</p>
+   <p> {galleryItem}</p>
+
+   </>
+
+  )
   
 }
-
+//why is galleryItem undefined 
 
 
 export default GalleryItem;
