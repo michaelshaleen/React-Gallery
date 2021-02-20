@@ -54,7 +54,7 @@ To practice passing values through `props` in React, you will build the gallery 
 
 
 
-
+ 
 
 
     - Make GalleryItems

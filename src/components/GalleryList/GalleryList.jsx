@@ -7,22 +7,26 @@ function GalleryList({galleryList}){
   
   
   return(<>
+      <div>
+      {galleryList.map((item) => {
+        return (
+          <GalleryItem
+            key={item.id}
+            galleryItem={item}
+          />
+        );
+      })}
+    </div>
   <span>galleryList, should .map and list </span>
-<p>
 
-{galleryList.map(galleryItem => 
-  (<li key={galleryItem.id}>{galleryItem.id} {galleryItem.title},{galleryItem.pathFor} </li>))}
-  < GalleryItem />
-</p>
 </>
 
 )
   }
-
+  
 
 
   export default GalleryList;
 
-
-
+ 
   //want to get .props from array of objects to list them out

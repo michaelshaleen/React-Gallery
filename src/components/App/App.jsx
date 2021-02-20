@@ -19,7 +19,7 @@ function App() {
   .then(response => {
     //console.log(response.data, "res data")
     setGalleryList(response.data);
-    setGalleryItem(response.pathFor);
+    //setGalleryItem(response.pathFor);
   //console.log(galleryList, "gall list");
   })
   .catch(err => {
