@@ -1,8 +1,6 @@
 import App from '../App/App';
 import GalleryItem from '../GalleryItem/GalleryItem';
 
-
-
 function GalleryList({galleryList}){
  // console.log({galleryList})
   return(
@@ -25,5 +23,3 @@ function GalleryList({galleryList}){
 
   export default GalleryList;
 
- 
-  //want to get .props from array of objects to list them out

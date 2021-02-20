@@ -5,7 +5,6 @@ import {useState, useEffect} from 'react';
 import GalleryList from '../GalleryList/GalleryList';
 // import galleryItems from '../modules/gallery.data.js';
 
-
 function App() {
   const [galleryList, setGalleryList] = useState([]);
 
@@ -42,13 +41,11 @@ function fetchGuests() {
         <p>
         <GalleryList galleryList={galleryList} />
         </p>
-        <img src="images/goat_small.jpg"/>
         </form>
 
       </div>
     );
 }
 
-{/* <GalleryItem /> */}
 
 export default App;
