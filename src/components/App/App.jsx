@@ -9,12 +9,12 @@ function App() {
   const [galleryList, setGalleryList] = useState([]);
 
   useEffect(() => {
-    fetchGuests(); //fun that axios get is within
+    fetchGuests(); //function that axios get is within
   }, []);
 
 function fetchGuests() {
   axios({
-    method: 'GET',
+    method: 'GET', //go grab from gallery 
     url: '/gallery'
   })
   .then(response => {
@@ -29,24 +29,24 @@ function fetchGuests() {
 }
   //issues getting galleryList
   // into the return
-
+////////////////////////////////////////////////////
+///////////////////////////////////////////////////
     return (
       <div className="App">
+
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
 
-        <form>
+        <div>
         <p>
         <GalleryList
          galleryList={galleryList}
          fetchGuests={fetchGuests} />
         </p>
-        </form>
-
+        </div>
       </div>
     );
 }
-
 
 export default App;
