@@ -20,7 +20,21 @@ const galleryItems = [
       description: 'Artwork of a Bear', 
       likes:0,
 
-      }
+      },
+      { id:4,
+        title:'Family',
+        pathFor: 'images/itachi.png',
+        description: 'Spouse', 
+        likes:0,
+  
+        },
+        { id:4,
+          title:'Family',
+          pathFor: 'images/couple.jpg',
+          description: 'Spouse', 
+          likes:0,
+    
+          }
     
      
 ];
