@@ -1,8 +1,9 @@
 import GalleryList from '../GalleryList/GalleryList'
 import {useState} from 'react';
 import axios from 'axios';
+import './GalleryItem.css'
 
-function GalleryItem({galleryItem, fetchGuests}) {
+function GalleryItem({galleryItem, addLikes}) {
   //console.log(galleryItem.pathFor, "item")
 // run onclick of select picture
 // onclick change to true
@@ -19,28 +20,28 @@ function Clicked(event) {
   }
   };
 
-  function addLikes(galleryId) {
-     //galleryItem.likes ++;
-     //console.log(galleryItem.likes)  
-     axios({
-       method: 'PUT',
-       url: `/gallery/like/${galleryId}`
-      })
-      .then(() => {
-      fetchGuests();
-      console.log(galleryItem.likes, "likes")
-    })
-    .catch((error) =>
-    console.log("error addlikes axios"))
+  // function addLikes(galleryId) {
+  //    //galleryItem.likes ++;
+  //    //console.log(galleryItem.likes)  
+  //    axios({
+  //      method: 'PUT',
+  //      url: `/gallery/like/${galleryId}`
+  //     })
+  //     .then(() => {
+  //     fetchGuests();
+  //     console.log(galleryItem.likes, "likes")
+  //   })
+  //   .catch((error) =>
+  //   console.log("error addlikes axios"))
     
-  }
+  // }
   //need to refresh page , likes are updating after click on photo 
   /////////////////////////////////
   /////////////////////////////////
   return(
     <>
        {!isClicked 
-       ? <img onClick={Clicked} src={galleryItem.pathFor} />
+       ? <img className="image" onClick={Clicked} src={galleryItem.pathFor} />
        : <div onClick={Clicked}>{galleryItem.description}</div>
 }
        <div> likes count {galleryItem.likes}</div>

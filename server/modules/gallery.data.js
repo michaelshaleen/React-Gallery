@@ -11,7 +11,6 @@ const galleryItems = [
        pathFor: 'images/reef_fish.jpg',
        description:'Underwater photo of Parrotfish',
        likes: 0,
-
       },
       
       { id:3,
@@ -19,24 +18,21 @@ const galleryItems = [
       pathFor: 'images/bear.jpeg',
       description: 'Artwork of a Bear', 
       likes:0,
-
       },
+
       { id:4,
         title:'Family',
         pathFor: 'images/itachi.png',
         description: 'Spouse', 
         likes:0,
-  
         },
+
         { id:4,
           title:'Family',
           pathFor: 'images/couple.jpg',
           description: 'Spouse', 
           likes:0,
-    
           }
-    
-     
 ];
 
 module.exports = galleryItems;

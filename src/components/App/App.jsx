@@ -27,6 +27,23 @@ function fetchGuests() {
     console.log("err", err)
   })
 }
+
+
+function addLikes(galleryId) {
+  //galleryItem.likes ++;
+  //console.log(galleryItem.likes)  
+  axios({
+    method: 'PUT',
+    url: `/gallery/like/${galleryId}`
+   })
+   .then(() => {
+   fetchGuests(); //grabs updated 
+   console.log(galleryItem.likes, "likes")
+ })
+ .catch((error) =>
+ console.log("error addlikes axios"))
+ 
+}
   //issues getting galleryList
   // into the return
 ////////////////////////////////////////////////////
@@ -42,7 +59,7 @@ function fetchGuests() {
         <p>
         <GalleryList
          galleryList={galleryList}
-         fetchGuests={fetchGuests} />
+         addLikes={addLikes} />
         </p>
         </div>
       </div>

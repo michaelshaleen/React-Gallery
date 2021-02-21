@@ -1,7 +1,7 @@
 import App from '../App/App';
 import GalleryItem from '../GalleryItem/GalleryItem';
 
-function GalleryList({galleryList, fetchGuests}){
+function GalleryList({galleryList, fetchGuests, addLikes}){
  // console.log({galleryList})
   return(
   <>
@@ -11,7 +11,7 @@ function GalleryList({galleryList, fetchGuests}){
           <GalleryItem
             key={item.id}
             galleryItem={item}
-            fetchGuests = {fetchGuests}
+            addLikes = {addLikes}
             //galleryItem = {galleryItem}
           />
         );
