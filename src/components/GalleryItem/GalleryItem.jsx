@@ -20,15 +20,16 @@ function Clicked() {
   };
 
   function addLikes(event) {
-    event.preventDefault();
-    axios(
+    axios({
       method: 'PUT',
-      url: '/gallery/like/:id',
-      data:{
-        {galleryItem.likes} ++;
-      }
+      url: '/gallery/like/:id'
+    })
+    event.preventDefault();
+    return(
+    galleryItem.likes ++, 
+    console.log(galleryItem.likes)
     )
-      galleryItem.likes ++;
+
    }
 //need to refresh page , likes are updating after click on photo 
   /////////////////////////////////

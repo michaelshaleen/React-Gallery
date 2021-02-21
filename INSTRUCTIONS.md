@@ -55,8 +55,9 @@ To practice passing values through `props` in React, you will build the gallery 
 
     - Display the number likes for each item and include a like button.
 
-    
+
     - When the like button is clicked, use `Axios` to update (`PUT`) the like count `/gallery/like/:id`.
+    
     - Update the gallery each time a like button is clicked.
 
 
