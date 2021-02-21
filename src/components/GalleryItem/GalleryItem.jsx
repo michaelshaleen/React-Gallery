@@ -21,23 +21,22 @@ function Clicked(event) {
   }
   };
 
-  function addLikes(event) {
-    event.preventDefault();
-    // galleryItem.likes ++;
-
-    axios({
-      method: 'PUT',
-      url: '/gallery/like/:id'
-    })
-    .then(() => {
+  function addLikes(galleryId) {
+     //galleryItem.likes ++;
+     //console.log(galleryItem.likes)  
+     axios({
+       method: 'PUT',
+       url: `/gallery/like/${galleryId}`
+      })
+      .then(() => {
       fetchGuests();
       console.log(galleryItem.likes, "likes")
-      })
+    })
     .catch((error) =>
     console.log("error addlikes axios"))
     
   }
-//need to refresh page , likes are updating after click on photo 
+  //need to refresh page , likes are updating after click on photo 
   /////////////////////////////////
   /////////////////////////////////
   return(
@@ -47,7 +46,7 @@ function Clicked(event) {
        : <div onClick={Clicked}>{galleryItem.description}</div>
 }
        <div> likes count {galleryItem.likes}</div>
-       <button onClick={addLikes} >we Likes its</button>
+       <button onClick={() => addLikes(galleryItem.id)} >we Likes its</button>
 </>
   )
 };
