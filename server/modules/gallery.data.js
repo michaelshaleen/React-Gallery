@@ -21,6 +21,7 @@ const galleryItems = [
       likes:0,
 
       }
+    
      
 ];
 
