@@ -4,12 +4,10 @@ import axios from 'axios';
 
 function GalleryItem({galleryItem, fetchGuests}) {
   //console.log(galleryItem.pathFor, "item")
-  
 // run onclick of select picture
 // onclick change to true
 // if true then render the description
 const [isClicked, setIsClicked] = useState(false);
-
 
 function Clicked(event) {
   event.preventDefault();

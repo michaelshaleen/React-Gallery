@@ -1,7 +1,6 @@
 import App from '../App/App';
 import GalleryItem from '../GalleryItem/GalleryItem';
 
-
 function GalleryList({galleryList, fetchGuests}){
  // console.log({galleryList})
   return(
