@@ -12,7 +12,7 @@ const [isClicked, setIsClicked] = useState(false);
 
 function Clicked(event) {
   event.preventDefault();
-  console.log("clicked boi")
+  console.log("clicked")
   if(isClicked === false){
     setIsClicked(true)
   }else{
@@ -38,15 +38,16 @@ function Clicked(event) {
   //need to refresh page , likes are updating after click on photo 
   /////////////////////////////////
   /////////////////////////////////
+  const snow = "(View Picture)" ;
   return(
     <>
     <div>
        {!isClicked 
        ? <img className="image" onClick={Clicked} src={galleryItem.pathFor} />
-       : <span className="description" onClick={Clicked}>{galleryItem.description}</span>
+       : <span className="description" onClick={Clicked}>{galleryItem.description} {snow}</span>
 }
-       <div> likes count {galleryItem.likes}</div>
-       <button className="button" onClick={() => addLikes(galleryItem.id)} >we Likes its</button>
+       <div> Likes {galleryItem.likes}</div>
+       <button className="button" onClick={() => addLikes(galleryItem.id)} >Like</button>
        </div>
 </>
   )
