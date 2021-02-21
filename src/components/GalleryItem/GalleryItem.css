@@ -1,4 +1,14 @@
 .image{
   width: 200px;
   height: 200px;
+  border-radius: 10px;
+}
+
+.button{
+  border-width: thick;
+}
+
+.description{
+  border-color: red;
+  background-color: aqua;
 }

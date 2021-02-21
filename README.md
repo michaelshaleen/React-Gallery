@@ -11,7 +11,6 @@ Within the last 72 hours we have created and implemented a user friendly Photo G
   - JAVASCRIPT
   -
 
-
 ## PROBLEM:
  Impractical photo galleries made viewing family albums traumatic and psychologically
 damaging to loved ones.
@@ -41,7 +40,7 @@ damaging to loved ones.
 - Users may click the 'like' button to add a like. 
 
 
-## BUILT WITH
+## BUILT WITH (note: I'm not sure what this means)
 - 
 
 

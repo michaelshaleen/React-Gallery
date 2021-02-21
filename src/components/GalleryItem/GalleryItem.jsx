@@ -40,12 +40,14 @@ function Clicked(event) {
   /////////////////////////////////
   return(
     <>
+    <div>
        {!isClicked 
        ? <img className="image" onClick={Clicked} src={galleryItem.pathFor} />
-       : <div onClick={Clicked}>{galleryItem.description}</div>
+       : <span className="description" onClick={Clicked}>{galleryItem.description}</span>
 }
        <div> likes count {galleryItem.likes}</div>
-       <button onClick={() => addLikes(galleryItem.id)} >we Likes its</button>
+       <button className="button" onClick={() => addLikes(galleryItem.id)} >we Likes its</button>
+       </div>
 </>
   )
 };

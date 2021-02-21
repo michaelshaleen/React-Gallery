@@ -1,38 +1,50 @@
 const galleryItems = [
-    { id: 1, 
-      title: 'Mountain Goat',
-      pathFor: 'images/goat_small.jpg', 
-      description: 'Photo of a goat taken at Glacier National Park.',
+
+
+  { id:6,
+    title:'Family cuddles',
+    pathFor: 'images/cuddle.jpeg',
+    description: 'Cuddling with the Family', 
+    likes:0,
+    },
+
+
+  { id:1,
+    title:'Lauren and Michael',
+    pathFor: 'images/couple.jpg',
+    description: 'Lauren and Michael', 
+    likes:0,
+    }
+    ,
+    { id: 2, 
+      title: 'TBI',
+      pathFor: 'images/TBI.jpg', 
+      description: 'HeadBut Mtn Goat',
       likes: 0,
      },
 
-      { id: 2,
-       title: 'Reef Fish',
-       pathFor: 'images/reef_fish.jpg',
-       description:'Underwater photo of Parrotfish',
+      { id: 3,
+       title: 'Competition',
+       pathFor: 'images/tribalClash.jpg',
+       description:'ACTION PACKED COMPETITION ',
        likes: 0,
       },
       
-      { id:3,
+      { id:4,
       title:'Lone Bear',
       pathFor: 'images/bear.jpeg',
       description: 'Artwork of a Bear', 
       likes:0,
       },
 
-      { id:4,
-        title:'Family',
+      { id:5,
+        title:'Itachi',
         pathFor: 'images/itachi.png',
-        description: 'Spouse', 
+        description: 'You are welcome', 
         likes:0,
         },
 
-        { id:4,
-          title:'Family',
-          pathFor: 'images/couple.jpg',
-          description: 'Spouse', 
-          likes:0,
-          }
+     
 ];
 
 module.exports = galleryItems;
