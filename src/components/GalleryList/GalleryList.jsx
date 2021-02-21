@@ -2,7 +2,7 @@ import App from '../App/App';
 import GalleryItem from '../GalleryItem/GalleryItem';
 
 
-function GalleryList({galleryList}){
+function GalleryList({galleryList, fetchGuests}){
  // console.log({galleryList})
   return(
   <>
@@ -12,6 +12,7 @@ function GalleryList({galleryList}){
           <GalleryItem
             key={item.id}
             galleryItem={item}
+            fetchGuests = {fetchGuests}
             //galleryItem = {galleryItem}
           />
         );

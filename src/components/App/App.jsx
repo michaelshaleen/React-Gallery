@@ -38,7 +38,9 @@ function fetchGuests() {
 
         <form>
         <p>
-        <GalleryList galleryList={galleryList} />
+        <GalleryList
+         galleryList={galleryList}
+         fetchGuests={fetchGuests} />
         </p>
         </form>
 
